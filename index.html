@@ -1,5 +1,542 @@
-<html>
-  <body>
-    Under Maintanance!
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CV - Software Engineer</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fbe9e7; /* Light red background */
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #b71c1c; /* Dark red for the navbar */
+        }
+
+        .navbar a {
+            color: white;
+        }
+
+        .header {
+            background-color: #d32f2f; /* Strong red for header */
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 30px 15px;
+        }
+
+        .section-title {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #c2185b; /* A pinkish red for section titles */
+        }
+
+        .card {
+            border-radius: 8px;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .contact-card, .education-card, .skills-card, .experience-card, .languages-card, .tools-card {
+            background-color: #ffffff; /* White background for the content cards */
+            padding: 25px;
+            margin-bottom: 20px;
+            height: 100%; /* Ensures cards take equal height */
+        }
+
+        .card-body h5 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #d32f2f; /* Dark red for titles within cards */
+        }
+
+        .footer {
+            background-color: #b71c1c; /* Dark red for footer */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .download-btn {
+            background-color: #b71c1c; /* Red pink button color */
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .download-btn:hover {
+            background-color: #9c1b1b; /* Darker red for hover effect */
+        }
+
+        .education-card, .experience-card, .skills-card, .tools-card {
+            margin-bottom: 20px;
+        }
+
+        .languages-card ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .languages-card ul li {
+            margin-bottom: 10px;
+        }
+
+        .language-rating {
+            color: #FFD700;
+        }
+
+        /* Navbar Logo */
+        .navbar-logo-text {
+            display: flex;
+            align-items: center;
+            font-family: 'Helvetica', Arial, sans-serif;
+        }
+
+        .brand-name {
+            font-size: 36px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .dev-text {
+            font-size: 24px; /* Reduced size for .dev */
+            font-weight: normal;
+            color: #9b0000;
+            position: relative;
+        }
+
+        .dev-text::before {
+            content: '.dev';
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 24px;
+            font-weight: normal;
+            color: white;
+            opacity: 0.6;
+        }
+
+        .navbar-brand {
+            text-decoration: none;
+        }
+
+        /* Navbar Menu in Capsule Style */
+        .navbar-nav .nav-item {
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+
+        .navbar-nav .nav-link {
+            background-color: #920909; /* Capsule background color */
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar-nav .nav-link:hover {
+            background-color: #9c1b1b; /* Darker red on hover */
+        }
+
+        .nav-item{
+            margin-left: 5px !important;
+            margin-right: 5px !important;
+        }
+
+        /* Responsive Navbar */
+        @media (max-width: 767px) {
+            .navbar-brand {
+                font-size: 1.5rem;
+            }
+
+            .navbar-nav .nav-link {
+                font-size: 1.1rem;
+            }
+            .nav-item{
+                margin-top: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span class="navbar-logo-text">
+                    <span class="brand-name">Waseel</span>
+                    <span class="dev-text">.dev</span>
+                </span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#languages">Languages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!-- Header -->
+<header class="header">
+    <div class="container text-center">
+        <!-- Profile Image -->
+        <img 
+            src="https://media.licdn.com/dms/image/v2/D4E03AQHEgRge0K_zsA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1706256711961?e=2147483647&v=beta&t=acpIAz0TocVROSERG8pIHWFek1vC1P52Pqfa3sN_sw8" 
+            alt="Profile Image of Mohammad Waseel" 
+            class="rounded-circle mb-3" 
+            style="width: 150px; height: 150px; object-fit: cover; border: 3px solid white; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        <h1>Mohammad Waseel</h1>
+        <p>"Software Engineer"</p>
+        <a href="#" class="download-btn">Download CV</a>
+    </div>
+</header>
+
+
+
+    <!-- About Section -->
+    <section id="about" class="container">
+        <div class="section-title"><i class="bi bi-person"></i> About Me</div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card about-card">
+                    <div class="card-body">
+                        <p>Hi! I am Mohammad Waseel, a passionate Software Engineer with experience in developing innovative web applications and software solutions. I specialize in full-stack development and strive to build scalable, efficient, and user-friendly systems.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="container">
+        <div class="section-title"><i class="bi bi-mortarboard"></i> Education</div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card education-card">
+                    <div class="card-body">
+                        <h5>10th Grade</h5>
+                        <p>Tyndale Biscoe School, Srinagar</p>
+                        <h5>12th Grade</h5>
+                        <p>Sri Pratap Higher Secondary School, Srinagar</p>
+                        <h5>B.Tech in Computer Science and Engineering</h5>
+                        <p>Alfalah University, Faridabad - Graduated in 2018</p>
+                        <h5>M.Tech in Computer Science and Engineering</h5>
+                        <p>Desh Bhagat University - Graduated in 2021</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Experience Section -->
+    <section id="experience" class="container">
+        <div class="section-title"><i class="bi bi-briefcase"></i> Professional Experience</div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card experience-card">
+                    <div class="card-body">
+                        <h5>Software Engineer at Company 1</h5>
+                        <p>2021 - Present</p>
+                        <ul>
+                            <li>Worked on developing web applications using React, Node.js, and others.</li>
+                        </ul>
+                        <h5>Software Engineer at Company 2</h5>
+                        <p>2020 - 2021</p>
+                        <ul>
+                            <li>Developed backend services using Java and Spring Boot.</li>
+                        </ul>
+                        <h5>Software Engineer at Company 3</h5>
+                        <p>2019 - 2020</p>
+                        <ul>
+                            <li>Developed RESTful APIs and integrated with front-end services.</li>
+                        </ul>
+                        <h5>Software Engineer at Company 4</h5>
+                        <p>2018 - 2019</p>
+                        <ul>
+                            <li>Worked on cloud computing and deployment using AWS.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="container">
+        <div class="section-title"><i class="bi bi-laptop"></i> Skills</div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card skills-card">
+                    <div class="card-body">
+                        <h5>Programming Languages</h5>
+                        <ul>
+                            <li>JavaScript</li>
+                            <li>Python</li>
+                            <li>Java</li>
+                            <li>C++</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card skills-card">
+                    <div class="card-body">
+                        <h5>Frameworks</h5>
+                        <ul>
+                            <li>React.js</li>
+                            <li>Node.js</li>
+                            <li>Angular</li>
+                            <li>Django</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card tools-card">
+                    <div class="card-body">
+                        <h5>Tools and Utilities</h5>
+                        <ul>
+                            <li>Git</li>
+                            <li>Docker</li>
+                            <li>Postman</li>
+                            <li>Jira</li>
+                            <li>VS Code</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Languages Section -->
+    <section id="languages" class="container">
+        <div class="section-title"><i class="bi bi-translate"></i> Languages</div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card languages-card">
+                    <div class="card-body">
+                        <ul>
+                            <li>English - <span class="language-rating">⭐⭐⭐⭐⭐</span></li>
+                            <li>Urdu - <span class="language-rating">⭐⭐⭐⭐⭐</span></li>
+                            <li>Hindi - <span class="language-rating">⭐⭐⭐⭐⭐</span></li>
+                            <li>Punjabi - <span class="language-rating">⭐⭐⭐⭐☆</span></li>
+                            <li>Arabic - <span class="language-rating">⭐⭐☆☆☆</span></li>
+                            <li>Kashmiri - <span class="language-rating">⭐⭐⭐⭐⭐</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Projects Section -->
+<section id="projects" class="container">
+    <div class="section-title"><i class="bi bi-kanban"></i> Projects</div>
+    <div class="row" id="projects-list">
+        <!-- Initial Projects -->
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5>Project 1</h5>
+                    <p>A web application built with React and Node.js for e-commerce functionality.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5>Project 2</h5>
+                    <p>Mobile application developed in Flutter for task management and scheduling.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5>Project 3</h5>
+                    <p>RESTful API for inventory management built using Django and PostgreSQL.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- View More Button -->
+    <div class="text-center">
+        <button id="view-more-btn" class="btn btn-danger view-more-btn">View More</button>
+    </div>
+</section>
+
+<!-- Custom Button Styling -->
+<style>
+    .view-more-btn {
+        background-color: #b71c1c; /* Dark red background */
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        border: none;
+        transition: background-color 0.3s ease;
+    }
+
+    .view-more-btn:hover,
+    .view-more-btn:active {
+        background-color: #9c1b1b; /* Darker red for hover and click effect */
+        outline: none; /* Prevents default outline */
+    }
+
+    /* Prevents default blue background when button is pressed or right-clicked */
+    .view-more-btn:focus {
+        background-color: #9c1b1b;
+        outline: none; /* Remove blue outline when focused */
+    }
+</style>
+
+<script>
+    const projects = [
+        {
+            title: "Project 4",
+            description: "Real-time chat application using WebSocket and Express.js."
+        },
+        {
+            title: "Project 5",
+            description: "Portfolio website built with HTML, CSS, and JavaScript for a designer."
+        },
+        {
+            title: "Project 6",
+            description: "AI-based chatbot using Python and TensorFlow for customer support."
+        },
+        {
+            title: "Project 7",
+            description: "Online learning platform using Angular and Firebase."
+        },
+        {
+            title: "Project 8",
+            description: "Financial tracking application built with React Native."
+        },
+    ];
+
+    const projectsList = document.getElementById("projects-list");
+    const viewMoreBtn = document.getElementById("view-more-btn");
+    let currentIndex = 0;
+
+    viewMoreBtn.addEventListener("click", () => {
+        const nextProjects = projects.slice(currentIndex, currentIndex + 3);
+        nextProjects.forEach(project => {
+            const col = document.createElement("div");
+            col.className = "col-md-4 mb-3";
+            col.innerHTML = `
+                <div class="card">
+                    <div class="card-body">
+                        <h5>${project.title}</h5>
+                        <p>${project.description}</p>
+                    </div>
+                </div>
+            `;
+            projectsList.appendChild(col);
+        });
+
+        currentIndex += 3;
+
+        // Hide button if all projects are displayed
+        if (currentIndex >= projects.length) {
+            viewMoreBtn.style.display = "none";
+        }
+    });
+</script>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="container">
+        <div class="section-title"><i class="bi bi-envelope"></i> Contact Us</div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card contact-card">
+                    <div class="card-body">
+                        <h5>Email:</h5>
+                        <p><a href="mailto:waseel.dev@gmail.com">waseel.dev@gmail.com</a></p>
+                        <h5>Phone:</h5>
+                        <p><a href="tel:+919650544138">+91 9650544138</a></p> <!-- Added phone link -->
+                        <h5>LinkedIn:</h5>
+                        <p><a href="https://www.linkedin.com/in/mohammadwaseel" target="_blank">linkedin.com/in/mohammadwaseel</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; <span id="current-year"></span> Mohammad Waseel. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        // JavaScript to update the copyright year
+        document.getElementById("current-year").textContent = new Date().getFullYear();
+    </script>
+    
+
+    <!-- Bootstrap JS & jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".download-btn").click(function () {
+                window.location.href = 'path/to/your/cv.pdf'; // Set the correct path to your CV
+            });
+        });
+    </script>
+
+</body>
+
 </html>
